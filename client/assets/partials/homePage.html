@@ -1,0 +1,30 @@
+<div ng-controller="showProductCtrl as PC">
+
+	<ul>
+		<li><a href="#/">Home</a></li>
+		<li><a href="#/newProduct">Add New Product</a></li>	
+		<li><a href="#/listings">My product listings</a></li>
+		<li><a href="#/cart">View Cart</a></li>
+		<li class="logged_in_user" ng-hide="PC.user"><a href="#/login">Sign In </a></li>
+		<li class="logged_in_user" ng-show="PC.user"><a ng-click="PC.logout()">Logout</a></li>
+		<li class="logged_in_user" ng-show="PC.user">Hi {{ PC.user.first_name }}</li>
+	</ul>
+
+
+	<h4 style="color: rgb(0,20,180);">Search for a Product <input type="text" placeholder="Search.." class="form-control" ng-model="search.product_name"></h4>
+
+	<div class="products" ng-repeat="product in PC.allProducts | filter:search:strict">
+
+			<img ng-src="{{product.imageUrl}}">
+			
+		<div class="product_desc">
+			<h2>{{product.product_name}} </h2>
+			<p>{{product.description}}</p>
+			<p><b>Price: </b> ${{product.price}}</p>
+			<a href="#/show/{{product._id}}"><button ng-click="PC.getOneProduct(product._id)">View this product</button></a>
+		</div>
+			
+		<hr>
+	</div>
+
+</div>

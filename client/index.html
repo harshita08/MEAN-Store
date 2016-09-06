@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app= "myApp">
+<head>
+	<title>Project MEAN_Store</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/static/styles.css">
+    
+	<script type="text/javascript" src="angular/angular.js"></script>
+	<script type="text/javascript" src='angular-route/angular-route.js'></script>
+
+	<script type="text/javascript" src='assets/main.js'></script>
+	
+	<!-- adding in controller files -->
+	<script type="text/javascript" src='assets/controllers/ProductController.js'></script>
+	<script type="text/javascript" src='assets/controllers/loginRegController.js'></script>
+	<script type="text/javascript" src='assets/controllers/showProducts.js'></script>
+	<script type="text/javascript" src='assets/controllers/showCartController.js'></script>
+	<script type="text/javascript" src='assets/controllers/listingsController.js'></script>
+
+	<!-- adding in factory files -->
+	<script type="text/javascript" src='assets/factories/productsFactory.js'></script>
+	<script type="text/javascript" src='assets/factories/usersFactory.js'></script>
+	<script type="text/javascript" src='assets/factories/cartFactory.js'></script>
+	
+</head>
+<body>
+	
+	<div class="container">
+		<div class="header">
+			<h2>The MEAN Store</h2>
+		</div>
+		<div ng-view=""></div>
+	</div>
+
+</body>
+</html>

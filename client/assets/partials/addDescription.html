@@ -1,0 +1,19 @@
+<div ng-controller="listingsCtrl as LC">
+	
+	<h3>Add More Description!</h3>
+	<form ng-submit="LC.addDetails(LC.oneProduct._id)">
+
+		<h4>Product Description: <textarea rows='4' cols='40' ng-model="LC.prodDetails.desc" required></textarea></h4>
+
+		<h4>Technical Specifications: <input type="text" ng-model="LC.prodDetails.tech_spec" required></h4>
+
+		<h4>Item Weight: <input type="text" ng-model="LC.prodDetails.weight" required></h4>
+
+		<h4>Product Dimensions: <input type="text" ng-model="LC.prodDetails.dimensions" required></h4>
+
+		<h4>Manufacturer: <input type="text" ng-model="LC.prodDetails.manufacturer" required></h4>
+
+		<input type="submit" value="Add Details"></input>
+	</form>
+
+</div>

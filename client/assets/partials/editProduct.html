@@ -1,0 +1,30 @@
+<div ng-controller="listingsCtrl as LC">
+
+	<ul>
+		<li><a href="#/">Home</a></li>
+		<li><a href="#/newProduct">Add New Product</a></li>	
+		<li><a href="#/listings">My product listings</a></li>
+		<li><a href="#/cart">View Cart</a></li>
+		<li class="logged_in_user">Hi {{ PC.user.first_name }}</li>
+	</ul>
+	
+	<div class="add_product">
+	<h3>Edit this Product!</h3>
+	<form name="myForm" ng-submit="LC.editProduct(LC.oneProduct._id)"> 
+
+		<h4>Product Name: <input type="text" ng-model="LC.prod.product_name"  ng-value="LC.oneProduct.product_name" required></h4>
+
+		<h4>Product Description: <input type="text" ng-model="LC.prod.description" ng-value="LC.oneProduct.description" required></h4>
+
+		<h4>Quantity Available: <input type="text" ng-model="LC.prod.quantity" ng-value="LC.oneProduct.quantity" required></h4>
+
+		<h4>Price: <input type="text" ng-model="LC.prod.price" ng-value="LC.oneProduct.price" required></h4>
+
+		<h4>Image Url: <input type="text" ng-model="LC.prod.imageUrl" ng-value="LC.oneProduct.imageUrl" required></h4>
+
+		<input type="submit" value="Submit">
+	</form>
+
+	</div>
+
+</div>

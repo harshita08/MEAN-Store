@@ -1,0 +1,49 @@
+<div ng-controller="showCartCtrl as CC">
+
+	<ul>
+		<li><a href="#/">Home</a></li>
+		<li><a href="#/newProduct">Add New Product</a></li>	
+		<li><a href="#/listings">My product listings</a></li>
+		<li><a href="#/cart">View Cart</a></li>
+		<li class="logged_in_user">Hi {{ CC.user.first_name }}</li>
+	</ul>
+
+	<h2 style="text-align:center; color:rgb(0,20,180);">Ready to Place Order??</h2>
+	<div class="address">
+	
+		<h3>Enter your Shipping Address!</h3>
+		<p>Address Line 1 <input type="text"></p>
+		<p>Address Line 2 <input type="text"></p>
+		<p>City <input type="text"></p>
+		<p>State <input type="text"></p>
+		<p>Zipcode <input type="text"></p>
+		<p>Phone Number <input type="text"></p>
+
+		<div class="delivery_method">
+		<h3>Choose Delivery Method</h3>
+		<input type="radio" name="delivery" value="express"> Express delivery (within 1 day)<br>
+		<input type="radio" name="delivery" value="standard" checked> Standard delivery (within 2-3 days)<br>
+		<input type="radio" name="delivery" value="delayed"> Late delivery (within 5-7 days)<br>
+		</div>
+
+		<a href="#/" ng-click="CC.checkOut()"><button><b>Place Order!</b></button></a>
+	</div>
+
+	<div class="second_cart">
+		<h3 style="text-align: center;"><u>My Cart</u></h3>
+		<div ng-repeat = "cart in CC.allProducts" ng-show="CC.flag" class="cart_product2">
+			
+			<img ng-src="{{cart.product_imageUrl}}">
+			<div class="product_desc2">
+				<h5>{{cart.product_name}} - ${{cart.product_price}}</h5>
+
+				<p>	Qty: {{cart.product_quantity}}</p>
+				<p>Total: ${{cart.total}}</p>
+				
+			</div>
+		
+		</div>
+		<h4>Total Amount: ${{CC.val.value}}</h4>
+		
+	</div>
+</div>

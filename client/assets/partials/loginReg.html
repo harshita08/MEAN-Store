@@ -1,0 +1,32 @@
+<div ng-controller="loginRegCtrl as LC">
+
+	<div class="register">
+	<h2 style="color: rgb(0,20,180);">Register</h2>
+	<form>
+		<p>First Name: <input type="text" ng-model="LC.newUser.first_name" required></p>
+		{{errors.first_name.message}}
+		
+		<p>Last Name: <input type="text" ng-model="LC.newUser.last_name" required></p>
+		{{errors.last_name.message}}
+		
+		<p>Email: <input type="email" ng-model="LC.newUser.email" required></p>
+		{{errors.email.message}}
+		
+		<p>Password: <input type="password" ng-model="LC.newUser.password" required></p>
+		{{errors.password.message}}
+				
+		<input type="submit" value="Register" ng-click="LC.register()" class="logreg_button">
+	</form>
+	</div>
+
+	<div class="login">
+	<h2 style="color: rgb(0,20,180);">Login</h2>
+	<form>
+		<p>Email: <input type="email" ng-model="LC.logInfo.email" required></p>
+		<p>Password: <input type="password" ng-model="LC.logInfo.password" required></p>
+
+		<input type="submit" value="Login" ng-click="LC.login()" class="logreg_button">
+	</form>
+	</div>
+
+</div>

@@ -1,0 +1,211 @@
+div.container{
+    width: 970px;
+    min-height: 650px;
+    margin: 0 auto;
+    border: 1px solid rgb(150,150,150);
+}
+div.container p, h2, h3, h4, a{
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.header{
+    padding-top: 8px;
+    height: 80px;
+    text-align: center;
+    background-image: url("pic2.jpg");
+    background-repeat: no-repeat;
+    background-size:100%;
+}
+    div.header h2{
+        color: white;
+        margin-top: 20px;
+    }
+
+div.register{
+    margin-top: 50px;
+    margin-left: 220px;
+    width: 300px;
+    display: inline-block;
+}
+
+div.login{
+    margin-top: 50px;
+    margin-left: 80px;
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+}
+    .logreg_button{
+        width: 70px;
+        background-color: #1E90FF; 
+        height: 24px;
+        color: white;
+    }
+
+div.display_message{
+    margin-top: 200px;
+    text-align: center;
+    color: rgb(0,20,180);
+}
+
+
+div.products{
+    margin: 25px;
+}
+    div.products img{
+        height: 200px;
+        width: 200px;
+    }
+div.product_desc{
+    margin-left: 100px;
+    display: inline-block;
+    vertical-align: top;
+}
+    div.product_desc button{
+        background-color: #1E90FF; 
+        height: 24px;
+        color: white;
+        width: 120px;
+    }
+    div.product_desc h2{
+        color: rgb(0,20,180);
+    }
+
+/*In Show Product page....*/
+div.show_product{
+    margin-top: 70px;
+}
+    div.show_product img{
+        height: 300px;
+        width: 300px;
+        vertical-align: top;
+    }
+div.product_desc3{
+    width: 650px;
+    display: inline-block;
+}
+    div.product_desc3 p{
+        margin-bottom: 12px;
+        margin-top: 2px;
+    }
+    div.product_desc3 button{
+        background-color: #1E90FF; 
+        height: 24px;
+        color: white;
+        width: 100px;
+    }
+
+
+div.add_product{
+    padding-left: 70px;
+}
+    div.add_product h2{
+        color: rgb(0,20,180);
+    }
+    .add_prod_button{
+        width: 70px;
+        background-color: #1E90FF; 
+        height: 24px;
+        color: white;
+    }
+div.cart_product img{
+    height: 160px;
+    width: 160px;
+}
+    .cart_button{
+        background-color: #1E90FF; 
+        height: 24px;
+        color: white;
+        width: 100px;
+    }
+div.address{
+    margin-left: 100px;
+    display: inline-block;
+    vertical-align: top;
+}
+    div.address button{
+        width: 150px;
+        height: 28px;
+        font-size: 16px;
+        background-color: #1E90FF; 
+        color: white;
+    }
+div.delivery_method{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+div.second_cart{
+    display: inline-block;
+    width: 250px;
+    min-height: 200px;
+    border: 1px solid rgb(200,200,200);
+    margin-left: 280px;
+    margin-top: 50px;
+    padding: 0 10px 0 10px;
+}
+    div.cart_product2 img{
+        width: 100px;
+        height: 100px;
+    }
+    div.product_desc2{
+        width: 120px;
+        display: inline-block;
+        vertical-align: top;
+    }
+    div.product_desc2 p{
+        margin-top: 3px;
+        margin-bottom: 1px;
+        font-size: 14px;
+    }
+    div.second_cart h4{
+        text-align: center;
+    }
+    div.second_cart h5{
+        margin-bottom: 4px;
+    }
+
+div.listing_desc{
+    margin-left: 50px;
+    display: inline-block;
+    vertical-align: top;
+    width: 400px;
+}
+div.listing_desc button{
+    width: 70px;
+    background-color: #1E90FF; 
+    height: 24px;
+    color: white;
+}
+div.listings img{
+    width: 200px;
+    height: 200px;
+}
+
+
+/*  Navigation Bar  */
+ul {
+    height: 37px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1E90FF;
+}
+li {
+    margin-top: 9px;
+    margin-left: 20px;
+    float: left;
+    height: 25px;
+}
+li a:hover {
+    background-color: blue;
+}
+li a{
+    color: white;
+    text-decoration: none;
+}
+.logged_in_user{
+    margin-right: 5px;
+        float: right;
+        color: white;
+    }
+

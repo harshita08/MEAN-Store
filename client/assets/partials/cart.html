@@ -1,0 +1,39 @@
+<div ng-controller="showCartCtrl as CC">
+
+	<ul>
+		<li><a href="#/">Home</a></li>
+		<li><a href="#/newProduct">Add New Product</a></li>	
+		<li><a href="#/listings">My product listings</a></li>
+		<li><a href="#/cart">View Cart</a></li>
+		<li class="logged_in_user" ng-hide="CC.user"><a href="#/login">Sign In </a></li>
+		<li class="logged_in_user" ng-show="CC.user">Hi {{ CC.user.first_name }}</li>
+	</ul>
+
+	<div ng-hide="CC.user" class="display_message">
+		<h3>Please Sign In to see products in your Cart!</h3>
+	</div>
+	
+	<div ng-show="CC.user">
+	<h3 ng-show="CC.oneProduct">My Cart!</h3>	
+	<div ng-repeat = "cart in CC.allProducts" class="cart_product">
+		
+		<img ng-src="{{cart.product_imageUrl}}">
+		<div class="product_desc">
+			<h3>{{cart.product_name}} ${{cart.product_price}}</h3>
+			<p>Qty: {{cart.product_quantity}}</p>
+			<button ng-click="CC.deleteProductFromCart(cart._id)">Remove from Cart</button>
+			
+		</div>
+		<hr>
+	</div>
+
+	<div>
+	<div ng-show="CC.oneProduct">
+		<a href="#/">Continue Shopping</a>
+		<a href="#/checkout"><button class="cart_button">Check Out</button></a>
+	</div>
+		<h3 ng-hide="CC.oneProduct" style="color: rgb(0,20,180);">You have no items in your cart!</h3>
+	</div>
+	</div>
+</div>
+

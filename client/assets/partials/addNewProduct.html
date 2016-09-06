@@ -1,0 +1,52 @@
+<div ng-controller="productCtrl as PC">
+
+	<ul>
+		<li><a href="#/">Home</a></li>
+		<li><a href="#/newProduct">Add New Product</a></li>	
+		<li><a href="#/listings">My product listings</a></li>
+		<li><a href="#/cart">View Cart</a></li>
+		<li class="logged_in_user" ng-hide="PC.user"><a href="#/login">Sign In </a></li>
+		<li class="logged_in_user" ng-show="PC.user">Hi {{ PC.user.first_name }}</li>
+	</ul>
+
+	<div ng-hide="PC.user" class="display_message">
+		<h3>Please Sign In to list a product on this site!</h3>
+	</div>
+
+<div class="add_product" ng-show="PC.user">
+
+	<h2>Add New Product!</h2>
+	<form name="myForm" ng-submit="PC.addProduct()"> 
+
+		<h4>Product Name: <input type="text" ng-model="PC.newProduct.product_name" required></h4>
+
+		<h4>Product Description: <textarea rows='4' cols='50' ng-model="PC.newProduct.description" required></textarea></h4>
+
+		<h4>Category: <select ng-model="PC.newProduct.category">
+			<option>Electronic Appliances</option>
+			<option>Sports Equipments</option>
+			<option>Musical Instruments</option>
+			<option>Toys and Games</option>
+			<option>Collectibles and Fine Art</option>
+		</select></h4>
+
+		<h4>Quantity Available: <input type="text" ng-model="PC.newProduct.quantity" required></h4>
+
+		<h4>Price: <input type="text" ng-model="PC.newProduct.price" required></h4>
+		
+		<h4>Image Url: <textarea rows='1' cols='50' ng-model="PC.newProduct.imageUrl" required></textarea></h4>
+
+		<h4>Technical Specifications: <textarea rows='4' cols='50' ng-model="PC.newProduct.technical_specifications" required></textarea></h4>
+
+		<h4>Item Weight: <input type="text" ng-model="PC.newProduct.weight" required></h4>
+
+		<h4>Product Dimensions: <input type="text" ng-model="PC.newProduct.dimensions" required></h4>
+
+		<h4>Manufacturer: <input type="text" ng-model="PC.newProduct.manufacturer" required></h4>
+
+		<input type="submit" value="Submit" class="add_prod_button">
+	</form>
+
+</div>
+
+</div>

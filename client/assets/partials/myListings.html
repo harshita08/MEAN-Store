@@ -1,0 +1,36 @@
+<div ng-controller="listingsCtrl as LC">
+
+	<ul>
+		<li><a href="#/">Home</a></li>
+		<li><a href="#/newProduct">Add New Product</a></li>	
+		<li><a href="#/listings">My product listings</a></li>
+		<li><a href="#/cart">View Cart</a></li>
+		<li class="logged_in_user" ng-hide="LC.user"><a href="#/login">Sign In </a></li>
+		<li class="logged_in_user" ng-show="LC.user">Hi {{ LC.user.first_name }}</li>
+	</ul>
+
+	<div ng-hide="LC.user" class="display_message">
+		<h3>Please Sign In to see your products listing!</h3>
+	</div>
+
+	<h3 ng-hide="LC.prod" style="color: rgb(0,20,180);">You have not listed any products yet!</h3>
+	<div ng-show="LC.prod">
+	<h3 ng-show="LC.user">My Products Listing!</h3>
+	</div>
+	
+	<div ng-repeat="product in LC.allProducts" class="listings" ng-show="LC.user">
+		<div class="listing_desc">
+			<h2>{{product.product_name}}</h2>
+			<p><b>Product Description: </b>{{product.description}}</p>
+			<p><b>Price: </b>${{product.price}}</p>
+
+			<button ng-click="LC.deleteProduct(product._id)">Delete</button>
+
+			<a href="#/edit/{{product._id}}"><button ng-click="LC.getOneProduct(product._id)">Edit</button></a>
+
+		</div>
+		<img ng-src="{{product.imageUrl}}">
+		<hr>
+	</div>
+	
+</div>
