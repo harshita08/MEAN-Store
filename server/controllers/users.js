@@ -45,8 +45,9 @@ module.exports = {
 		req.session.destroy(function(err){
 			if(err) 
 				res.json({status:false, errors:err})
-			else
-				res.json({status: true})
+			else{
+				res.json({status: true});
+			}
 		})
 	},
 

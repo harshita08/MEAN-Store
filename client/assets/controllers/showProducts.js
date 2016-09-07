@@ -58,7 +58,7 @@
 			function logout(){
 				usersFactory.logout(function(data){
 					if(data.status){
-						$location.url('/');
+						$location.url('/login');
 					} else {
 						vm.errors = data.errors;
 					}
